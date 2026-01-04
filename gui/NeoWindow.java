@@ -7,14 +7,10 @@ public class NeoWindow {
 
     public static void open() {
         SwingUtilities.invokeLater(() -> {
-            JFrame NeoFrame = new JFrame("NEO");
-            NeoFrame.setSize(500, 400);
-            NeoFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            NeoFrame.setVisible(true);
-
-            JFrame ChatFrame = new JFrame("Chat with me!");
-            ChatFrame.setSize(300, 600);
-            ChatFrame.setVisible(true);
+            JFrame neoFrame = new JFrame("NEO");
+            neoFrame.setSize(500, 400);
+            neoFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            neoFrame.setVisible(true);
         });
     }
 }
