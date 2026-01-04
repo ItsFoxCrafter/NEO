@@ -28,5 +28,7 @@ public class WelcomeProtocol {
         System.out.println("Intresting!");
 
         input.close();
+
+        System.out.println("I hope we will have good memories together :)");
     }
 }
