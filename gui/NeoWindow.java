@@ -1,23 +1,20 @@
 package gui;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 public class NeoWindow {
 
     public static void open() {
-        // Always open Swing on the Event Dispatch Thread
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("NEO");
-            frame.setSize(400, 300);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            JFrame NeoFrame = new JFrame("NEO");
+            NeoFrame.setSize(500, 400);
+            NeoFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            NeoFrame.setVisible(true);
 
-            // Optional label inside window
-            JLabel label = new JLabel("Hello, I'm NEO", JLabel.CENTER);
-            frame.add(label);
-
-            frame.setVisible(true); // ✅ must call this
+            JFrame ChatFrame = new JFrame("Chat with me!");
+            ChatFrame.setSize(300, 600);
+            ChatFrame.setVisible(true);
         });
     }
 }
