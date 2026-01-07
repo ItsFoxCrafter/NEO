@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -10,10 +11,13 @@ public class ChatWindow {
         SwingUtilities.invokeLater(() -> {
             JFrame chatFrame = new JFrame("Chat with me!");
             chatFrame.setSize(300, 600);
-            chatFrame.setVisible(true);
+            chatFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             JTextField inputField = new JTextField();
-            chatFrame.add(inputField);
+            inputField.setToolTipText("Type your message here...");
+            inputField.setFont(inputField.getFont().deriveFont(14f));
+            inputField.setColumns(20);
+            chatFrame.add(inputField, BorderLayout.SOUTH);
 
             chatFrame.setVisible(true);
         });
